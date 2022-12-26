@@ -14,12 +14,12 @@ selected = option_menu(
 if selected == "Analysis":
     st.title(f"Data analysis projects.")
     project_type = ["- Select Project Type -","Analysis Reports -- Summery","Detailed Analysis -- With Code"]
-project_selected = st.selectbox("Please select a project type below", options=project_type)
-if project_selected == "Analysis Reports -- Summery":
-    project_name = ["- Select Project Title -","Exploratory Data Analysis of Employee Attrition","Marketing Campaign Analysis Report","Product Analysis Report"]
-    title_selected = st.selectbox("Please select a project title below", options=project_name)
-    if title_selected == "Exploratory Data Analysis of Employee Attrition":
-        st.write("""
+    project_selected = st.selectbox("Please select a project type below", options=project_type)
+    if project_selected == "Analysis Reports -- Summery":
+        project_name = ["- Select Project Title -","Exploratory Data Analysis of Employee Attrition","Marketing Campaign Analysis Report","Product Analysis Report"]
+        title_selected = st.selectbox("Please select a project title below", options=project_name)
+        if title_selected == "Exploratory Data Analysis of Employee Attrition":
+            st.write("""
         Title: Exploratory Data Analysis of Employee Attrition
 
 Introduction:
@@ -60,10 +60,10 @@ Conclusion:
 This EDA has provided us with insights into the factors that contribute to employee attrition at XYZ company. We found that salary and performance are strong predictors of attrition, and that certain job roles are more prone to high attrition rates. These findings can inform future retention efforts at the company.
         """)
 
-    if title_selected == "Marketing Campaign Analysis Report":
-        st.header("Marketing Campaign Analysis Report")
-        st.subheader("Executive Summary:")
-        st.write("""
+        if title_selected == "Marketing Campaign Analysis Report":
+            st.header("Marketing Campaign Analysis Report")
+            st.subheader("Executive Summary:")
+            st.write("""
         
 
 
@@ -71,27 +71,27 @@ This EDA has provided us with insights into the factors that contribute to emplo
 The purpose of this report is to provide an analysis of our recent marketing campaign for our new product launch. The campaign was designed to increase awareness and drive sales of the new product. The campaign ran for a period of six weeks and included a combination of online and offline marketing activities such as social media advertising, email marketing, and in-store promotions.
 """)
 
-        st.subheader("Key Findings:")
-        st.write("""
+            st.subheader("Key Findings:")
+            st.write("""
         
 The campaign was successful in increasing brand awareness, as indicated by a 10% increase in website traffic and a 15% increase in social media followers.
 The campaign generated a total of 500 sales, exceeding our sales target by 25%.
 The email marketing campaign had the highest conversion rate, with a 10% click-through rate and a 5% conversion rate.
 The in-store promotions were less effective, with a 5% conversion rate.
 """)
-        st.subheader("Recommendations:")
-        st.write("""
+            st.subheader("Recommendations:")
+            st.write("""
 Based on the success of the email marketing campaign, we recommend increasing the budget for this channel in future campaigns.
 We recommend testing different types of in-store promotions to improve conversion rates in this channel.
 We recommend collecting and analyzing customer feedback to identify areas for improvement in future campaigns.
 """)
-        st.subheader("Conclusion:")
-        st.write("""
+            st.subheader("Conclusion:")
+            st.write("""
 
 Overall, the marketing campaign was successful in increasing brand awareness and driving sales. However, there is room for improvement in certain channels, and we recommend implementing the above recommendations to optimize future campaigns.
         """)
-    if title_selected == "Product Analysis Report":
-        st.write("""
+        if title_selected == "Product Analysis Report":
+            st.write("""
         Title: Product Analysis Report
 
 Executive Summary:
@@ -120,7 +120,7 @@ Overall, the XYZ widget is a promising new product with strong market potential 
 
 
 
-if selected == "Visualization":
-    st.title(f"Data visualization projects.")
-if selected == "Machine Learning":
-    st.title(f"Machine learning projects.")
+    if selected == "Visualization":
+        st.title(f"Data visualization projects.")
+    if selected == "Machine Learning":
+        st.title(f"Machine learning projects.")
