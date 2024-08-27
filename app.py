@@ -1,4 +1,5 @@
 pip install --upgrade pip
+pip install -r requirements.txt
 import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
