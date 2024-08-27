@@ -1,5 +1,4 @@
-pip install cement==2.10.14
-pip install -r requirements.txt
+sudo apt-get install python3-distutils
 import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
