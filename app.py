@@ -1,5 +1,8 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 # Sidebar menu
 selected = option_menu(
@@ -116,6 +119,36 @@ if selected == "Analysis":
 
 elif selected == "Visualization":
     st.title("Data Visualization Projects")
+    
+    # Example data
+    data = pd.DataFrame({
+        'x': np.arange(1, 11),
+        'y': np.random.randn(10).cumsum()
+    })
+
+    # Line chart
+    st.write("### Line Chart")
+    st.line_chart(data.set_index('x'))
+    
+    # Another example: Matplotlib chart
+    st.write("### Bar Chart")
+    fig, ax = plt.subplots()
+    ax.bar(data['x'], data['y'])
+    ax.set_xlabel('X Axis')
+    ax.set_ylabel('Y Axis')
+    ax.set_title('Bar Chart Example')
+    st.pyplot(fig)
 
 elif selected == "Machine Learning":
     st.title("Machine Learning Projects")
+    st.write("""
+    ### Machine Learning Projects
+    
+    Here, you can showcase various machine learning projects. For instance:
+    
+    - **Project 1: Predictive Modeling** - Build a model to predict future trends based on historical data.
+    - **Project 2: Classification** - Develop a model to classify data into predefined categories.
+    - **Project 3: Clustering** - Create a model to group similar data points together.
+    
+    You can use Streamlit's features to provide interactive elements for users to input data and see predictions or model evaluations in real-time.
+    """)
